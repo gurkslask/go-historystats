@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"strings"
 )
 
 func main() {
-	content, err := ioutil.ReadFile("/home/alex/.bash_history")
+	content, err := ioutil.ReadFile("/home/alexander/.bash_history")
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s", content)
+	strings.Split(content, "\n")
 }
