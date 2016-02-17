@@ -23,7 +23,7 @@ func main() {
 			result_map[temp_string[1]] += 1
 		}
 	}
-	for _, meh range result_map {
-		fmt.Printf("%s \n", meh)
+	for key, val := range result_map {
+		fmt.Printf("%s: %d \n", key, val)
 	}
 }
